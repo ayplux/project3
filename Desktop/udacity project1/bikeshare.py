@@ -69,7 +69,7 @@ def load_data(city, month, day):
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.weekday_name
 
-    # filter by month
+    # make sure you filter by month
     if month != 'All':
         month = months.index(month) + 1
         df = df[df['month'] == month]
